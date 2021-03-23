@@ -1,53 +1,45 @@
-import Head from "next/head";
-import Header from "../components/Header";
 import Heading from "../components/Heading";
 import CourseCard from "../components/course/CourseCard";
-import Content from "../components/layout/Content";
+import Layout from "../components/layout/Layout";
+
 import { getAllCourses, getMyCourses } from "./api/courses";
-import styles from './styles/courses.module.css'
+import styles from "./styles/courses.module.css";
 
 export default function CourseIndex({ data }) {
   const { allCourses, myCourses } = data;
   return (
-    <div>
-      <Head>
-        <title>Volta Academy: Course List</title>
-        <Header />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Content>
-        <Heading>My courses</Heading>
-        <div className={styles.grid}>
-          {myCourses.map((course) => {
-            return (
-              <CourseCard
-                key={course.slug}
-                slug={course.slug}
-                price={course.price}
-                title={course.title}
-                description={course.description}
-                isOwned
-                progress={course.progress}
-              />
-            );
-          })}
-        </div>
-        <Heading>All courses</Heading>
-        <div className={styles.grid}>
-          {allCourses.map((course) => {
-            return (
-              <CourseCard
-                key={course.slug}
-                slug={course.slug}
-                price={course.price}
-                title={course.title}
-                description={course.description}
-              />
-            );
-          })}
-        </div>
-      </Content>
-    </div>
+    <Layout title="Courses">
+      <Heading>My courses</Heading>
+      <div className={styles.grid}>
+        {myCourses.map((course) => {
+          return (
+            <CourseCard
+              key={course.slug}
+              slug={course.slug}
+              price={course.price}
+              title={course.title}
+              description={course.description}
+              isOwned
+              progress={course.progress}
+            />
+          );
+        })}
+      </div>
+      <Heading>All courses</Heading>
+      <div className={styles.grid}>
+        {allCourses.map((course) => {
+          return (
+            <CourseCard
+              key={course.slug}
+              slug={course.slug}
+              price={course.price}
+              title={course.title}
+              description={course.description}
+            />
+          );
+        })}
+      </div>
+    </Layout>
   );
 }
 

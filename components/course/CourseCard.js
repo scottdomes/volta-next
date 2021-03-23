@@ -1,11 +1,12 @@
 import styles from "./styles/CourseCard.module.css";
 import Card from "../Card";
+import Link from "next/link";
 
 const CourseCard = (props) => {
   const { price, title, description, progress, isOwned, slug } = props;
   return (
     <Card className={styles.card}>
-      <slug href={`/courses/${slug}`}>
+      <Link href={isOwned ? `/my/courses/${slug}` : `/courses/${slug}`}>
         <div>
           <div className={styles.container}>
             <div className={styles.head}>
@@ -23,7 +24,7 @@ const CourseCard = (props) => {
             </div>
           )}
         </div>
-      </slug>
+      </Link>
     </Card>
   );
 };
