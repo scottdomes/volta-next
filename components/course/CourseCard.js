@@ -1,16 +1,15 @@
 import styles from "./styles/CourseCard.module.css";
 import Card from "../Card";
-import Link from "next/link";
 
 const CourseCard = (props) => {
-  const { logo, price, title, description, progress, isOwned, link } = props;
+  const { price, title, description, progress, isOwned, slug } = props;
   return (
     <Card className={styles.card}>
-      <Link href={`/courses/${link}`}>
+      <slug href={`/courses/${slug}`}>
         <div>
           <div className={styles.container}>
             <div className={styles.head}>
-              {logo}
+              <img src={`/${slug}.svg`} alt="Course logo" />
               {!isOwned && <span className={styles.price}>${price}</span>}
             </div>
             <h1 className={styles.title}>{title}</h1>
@@ -24,7 +23,7 @@ const CourseCard = (props) => {
             </div>
           )}
         </div>
-      </Link>
+      </slug>
     </Card>
   );
 };
