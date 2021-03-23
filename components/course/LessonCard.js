@@ -5,7 +5,7 @@ import ProgressCircle from "./ProgressCircle";
 
 const LessonCard = ({ lesson }) => {
   return (
-    <Card>
+    <Card className={styles.container}>
       <h4>
         Lesson {lesson.sequence}: {lesson.title}
       </h4>
