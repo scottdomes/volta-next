@@ -3,13 +3,13 @@ import Card from "../Card";
 
 const CourseCard = ({ logo, price, title, description, progress }) => {
   return (
-    <Card>
-      <div>
+    <Card className={styles.container}>
+      <div className={styles.head}>
         {logo}
-        <span>{price}</span>
+        <span className={styles.price}>${price}</span>
       </div>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.description}>{description}</p>
       {progress > 0 && (
         <div>
           <h4>Progress: {progress}% complete</h4>

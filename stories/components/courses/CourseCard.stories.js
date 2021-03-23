@@ -10,7 +10,7 @@ const Template = (args) => <CourseCard {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  logo: null,
+  logo: <img src="/tic_logo.svg" alt="Thinking in Code course logo" />,
   title: "Thinking in Code",
   price: 9.0,
   description: "Start your coding journey by mastering universal principles",

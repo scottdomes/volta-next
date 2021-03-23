@@ -1,0 +1,28 @@
+@value black from "../../../styles/colors.css";
+
+.title {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.description {
+  margin: 0;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 28px;
+  background-color: black;
+  color: white;
+  padding: 0 7px;
+  padding-top: 1px;
+  border-radius: 5px;
+}
