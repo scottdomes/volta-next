@@ -6,9 +6,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
 }
 
-a {
-  color: inherit;
+body a {
+  color: #34495e;
   text-decoration: none;
+}
+
+a:hover, a:visited {
+  color: #c850c0;
 }
 
 * {
