@@ -1,3 +1,18 @@
+@value colors: "../../styles/colors.css";
+@value blue, purple, yellow from colors;
+
 .text {
   text-transform: uppercase;
+}
+
+.gradient {
+  background-color: blue;
+  background-image: linear-gradient(
+    43deg,
+    blue 0%,
+    purple 46%,
+    yellow 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
