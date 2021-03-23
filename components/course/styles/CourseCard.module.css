@@ -1,4 +1,4 @@
-@value black, blue from "../../../styles/colors.css";
+@value black, yellow from "../../../styles/colors.css";
 
 .title {
   font-size: 48px;
@@ -33,15 +33,13 @@
 
 .footer {
   width: 100%;
-}
-
-.button {
-  width: 100%;
+  text-align: center;
   padding: 10px 0;
-  text-transform: uppercase;
-  background-color: blue;
-  border: none;
-  color: white;
+  background-color: yellow;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.progress {
+  margin: 0;
 }
