@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Logo from '../components/Logo'
+import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
-        <Logo />
+        <Header />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
