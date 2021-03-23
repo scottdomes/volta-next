@@ -1,9 +1,12 @@
 @value colors: "../../styles/colors.css";
 @value white from colors;
 
+@value shadows: "../../styles/shadows.css";
+@value drop from shadows;
+
 .container {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: drop;
   padding: 10px;
 }

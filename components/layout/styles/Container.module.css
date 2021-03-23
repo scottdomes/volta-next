@@ -1,0 +1,5 @@
+@value maxWidth from "../../../styles/breakpoints.css";
+
+.container {
+  max-width: maxWidth;
+}

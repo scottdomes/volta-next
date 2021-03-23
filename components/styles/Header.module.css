@@ -1,0 +1,18 @@
+@value shadows: "../../styles/shadows.css";
+@value drop from shadows;
+
+.container {
+  box-shadow: drop;
+  padding: 7px 15px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.linkContainer a {
+  margin: 0 10px;
+}

@@ -1,18 +1,21 @@
 @value colors: "../../styles/colors.css";
 @value blue, purple, yellow from colors;
+@value small from "../../styles/breakpoints.css";
 
 .text {
   text-transform: uppercase;
+  margin: 0;
 }
 
 .gradient {
   background-color: blue;
-  background-image: linear-gradient(
-    43deg,
-    blue 0%,
-    purple 46%,
-    yellow 100%
-  );
+  background-image: linear-gradient(43deg, blue 0%, purple 46%, yellow 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media small {
+  .academy {
+    display: none;
+  }
 }
