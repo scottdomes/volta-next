@@ -1,0 +1,36 @@
+
+@value small from "styles/breakpoints.css";
+@value purple from "styles/colors.css";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: flex-end;;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.progress {
+  align-self: flex-end;
+  color: purple;
+}
+
+@media small {
+  .logo {
+    display: none;
+  }
+
+  .progress {
+    /* align-self: auto; */
+    margin-bottom: 6px;
+  }
+}
