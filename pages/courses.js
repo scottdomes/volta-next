@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 import CourseCard from "../components/course/CourseCard";
 import Content from "../components/layout/Content";
 import { getAllCourses, getMyCourses } from "./api/courses";
-import { useState } from "react";
+import styles from './styles/courses.module.css'
 
 export default function CourseIndex({ data }) {
   const { allCourses, myCourses } = data;
@@ -17,31 +17,35 @@ export default function CourseIndex({ data }) {
       </Head>
       <Content>
         <Heading>My courses</Heading>
-        {myCourses.map((course) => {
-          return (
-            <CourseCard
-              key={course.slug}
-              slug={course.slug}
-              price={course.price}
-              title={course.title}
-              description={course.description}
-              isOwned
-              progress={course.progress}
-            />
-          );
-        })}
+        <div className={styles.grid}>
+          {myCourses.map((course) => {
+            return (
+              <CourseCard
+                key={course.slug}
+                slug={course.slug}
+                price={course.price}
+                title={course.title}
+                description={course.description}
+                isOwned
+                progress={course.progress}
+              />
+            );
+          })}
+        </div>
         <Heading>All courses</Heading>
-        {allCourses.map((course) => {
-          return (
-            <CourseCard
-              key={course.slug}
-              slug={course.slug}
-              price={course.price}
-              title={course.title}
-              description={course.description}
-            />
-          );
-        })}
+        <div className={styles.grid}>
+          {allCourses.map((course) => {
+            return (
+              <CourseCard
+                key={course.slug}
+                slug={course.slug}
+                price={course.price}
+                title={course.title}
+                description={course.description}
+              />
+            );
+          })}
+        </div>
       </Content>
     </div>
   );
