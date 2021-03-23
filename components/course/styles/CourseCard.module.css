@@ -1,8 +1,12 @@
-@value black from "../../../styles/colors.css";
+@value black, blue from "../../../styles/colors.css";
 
 .title {
   font-size: 48px;
   margin: 10px 0;
+}
+
+.card {
+  padding: 0;
 }
 
 .container {
@@ -25,4 +29,19 @@
   padding: 0 7px;
   padding-top: 1px;
   border-radius: 5px;
+}
+
+.footer {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  padding: 10px 0;
+  text-transform: uppercase;
+  background-color: blue;
+  border: none;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
