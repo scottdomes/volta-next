@@ -54,41 +54,49 @@ export const getCourse = async (slug) => {
     lessons: [
       {
         sequence: 1,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 100,
       },
       {
         sequence: 2,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 100,
       },
       {
         sequence: 3,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 100,
       },
       {
         sequence: 4,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 25,
       },
       {
         sequence: 5,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 50,
       },
       {
         sequence: 6,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 75,
       },
       {
         sequence: 7,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 0,
       },
       {
         sequence: 8,
+        slug: "lesson-1",
         title: "Getting started",
         progress: 0,
       },

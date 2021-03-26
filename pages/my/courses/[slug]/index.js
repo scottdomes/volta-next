@@ -16,7 +16,7 @@ const LessonIndex = ({ course }) => {
       </div>
       <hr />
       {lessons.map((lesson) => {
-        return <LessonCard lesson={lesson} key={lesson.sequence} />;
+        return <LessonCard courseSlug={slug} lesson={lesson} key={lesson.sequence} />;
       })}
     </Layout>
   );

@@ -1,0 +1,21 @@
+import LessonLayout from "components/layout/LessonLayout";
+import { getCourse } from "pages/api/courses";
+
+export const meta = {
+  title: "Lesson 1",
+  author: "Lee Robinson",
+};
+
+Hellooo
+
+## o
+
+export default ({ children }) => (
+  <LessonLayout title={meta.title}>{children}</LessonLayout>
+);
+
+// export const getServerSideProps = async (context) => {
+//   const course = await getCourse(context.slug);
+//   console.log(course);
+//   return { props: { course } };
+// };
