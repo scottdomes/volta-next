@@ -25,7 +25,7 @@ const LessonIndex = ({ course }) => {
 export default LessonIndex;
 
 export async function getServerSideProps(context) {
-  const course = await getCourse(context.slug);
+  const course = await getCourse(context.course);
 
   return { props: { course } };
 }
