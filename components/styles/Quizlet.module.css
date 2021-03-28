@@ -1,0 +1,83 @@
+@value blue, lightBlue, yellow from "../../styles/colors.css";
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.heading {
+  margin: 0;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.question {
+  margin: 0;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.input {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.input:hover,
+.label:hover {
+  cursor: pointer;
+}
+
+.form {
+  margin: 0;
+}
+
+.button {
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 40px;
+  border-radius: 22px;
+}
+
+.button:hover {
+  background-color: lightBlue;
+  cursor: pointer;
+}
+
+.button:focus {
+  background-color: lightBlue;
+  outline: 0 !important;
+}
+
+.banner {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.bannerText {
+  margin: 0;
+}
+
+.correctBanner {
+  background-color: yellow;
+}
+
+.incorrectBanner {
+  background-color: rgb(105, 105, 105);
+}
+
+.incorrectBanner p {
+  color: white;
+}
