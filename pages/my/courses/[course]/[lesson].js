@@ -7,6 +7,7 @@ import Link from "next/link";
 import path from "path";
 import LessonLayout from "components/layout/LessonLayout";
 import { lessonPaths, CONTENT_PATH } from "util/mdxUtils";
+import { getCourse } from "pages/api/courses";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -20,7 +21,7 @@ const components = {
   Quizlet: dynamic(() => import("components/Quizlet")),
 };
 
-export default function PostPage({ source, frontMatter }) {
+export default function PostPage({ source, frontMatter, course }) {
   const content = hydrate(source, { components });
   return (
     <LessonLayout title={frontMatter.title}>
@@ -54,10 +55,13 @@ export const getStaticProps = async ({ params }) => {
     scope: data,
   });
 
+  const course = await getCourse(params.course);
+
   return {
     props: {
       source: mdxSource,
       frontMatter: data,
+      course,
     },
   };
 };

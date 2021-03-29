@@ -1,0 +1,45 @@
+@value shadows: "../../styles/shadows.css";
+@value drop from shadows;
+@value purple from "../../styles/colors.css";
+@value small from "../../styles/breakpoints.css";
+
+.container {
+  box-shadow: drop;
+  padding: 7px 15px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-left: 20px;
+}
+
+.progress {
+  color: purple;
+}
+
+@media small {
+  .logo {
+    display: none;
+  }
+
+  .title {
+    margin-left: 0;
+    font-size: 1em;
+  }
+
+  .progress {
+    font-size: .9em;
+  }
+}
