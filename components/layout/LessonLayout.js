@@ -7,18 +7,12 @@ const LessonLayout = ({ children, title }) => {
     <div>
       <Head>
         <title>Volta Academy: {title}</title>
-        <Header />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <Content>{children}</Content>
     </div>
   );
 };
 
 export default LessonLayout;
-
-export const getServerSideProps = async (context) => {
-  const course = await getCourse(context.slug);
-  console.log(course);
-  return { props: { course } };
-};

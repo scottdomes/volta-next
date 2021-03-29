@@ -5,7 +5,7 @@ import renderToString from "next-mdx-remote/render-to-string";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import path from "path";
-import Layout from "components/layout/Layout";
+import LessonLayout from "components/layout/LessonLayout";
 import { lessonPaths, CONTENT_PATH } from "util/mdxUtils";
 
 // Custom components/renderers to pass to MDX.
@@ -23,7 +23,7 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });
   return (
-    <Layout>
+    <LessonLayout title={frontMatter.title}>
       <div className="post-header">
         <h1>{frontMatter.title}</h1>
         {frontMatter.description && (
@@ -31,7 +31,7 @@ export default function PostPage({ source, frontMatter }) {
         )}
       </div>
       <main>{content}</main>
-    </Layout>
+    </LessonLayout>
   );
 }
 

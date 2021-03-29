@@ -7,9 +7,10 @@ const Layout = ({ children, title }) => {
     <div>
       <Head>
         <title>Volta Academy: {title}</title>
-        <Header />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
+
       <Content>{children}</Content>
     </div>
   );
