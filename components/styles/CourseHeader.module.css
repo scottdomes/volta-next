@@ -5,7 +5,7 @@
 
 .container {
   box-shadow: drop;
-  padding: 7px 15px;
+  padding: 7px 0;
 }
 
 .inner {
@@ -13,7 +13,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 10px 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .logoContainer {
@@ -30,6 +31,11 @@
 }
 
 @media small {
+  .inner {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
   .logo {
     display: none;
   }
@@ -40,6 +46,6 @@
   }
 
   .progress {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }

@@ -24,7 +24,7 @@ const components = {
 export default function PostPage({ source, frontMatter, course }) {
   const content = hydrate(source, { components });
   return (
-    <LessonLayout title={frontMatter.title}>
+    <LessonLayout title={frontMatter.title} course={course}>
       <div className="post-header">
         <h1>{frontMatter.title}</h1>
         {frontMatter.description && (

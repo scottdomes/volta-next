@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import styles from "./styles/CourseHeader.module.css";
 
 const CourseHeader = ({ course }) => {
-  const { price, title, description, progress, isOwned, slug } = course;
+  const { title, progress, slug } = course;
 
   return (
     <div className={styles.container}>
