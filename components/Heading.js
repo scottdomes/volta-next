@@ -1,8 +1,8 @@
 import styles from "./styles/Heading.module.css";
 
-const Heading = ({ children }) => {
+const Heading = ({ children, className }) => {
   return (
-    <div>
+    <div className={className}>
       <h3>{children}</h3>
       <hr />
     </div>

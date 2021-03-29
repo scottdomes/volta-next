@@ -8,6 +8,8 @@ import path from "path";
 import LessonLayout from "components/layout/LessonLayout";
 import { lessonPaths, CONTENT_PATH } from "util/mdxUtils";
 import { getCourse } from "pages/api/courses";
+import Heading from "components/Heading";
+import styles from "./styles/Lesson.module.css";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -26,12 +28,12 @@ export default function PostPage({ source, frontMatter, course }) {
   return (
     <LessonLayout title={frontMatter.title} course={course}>
       <div className="post-header">
-        <h1>{frontMatter.title}</h1>
+        <Heading className={styles.lessonHeading}>{frontMatter.title}</Heading>
         {frontMatter.description && (
           <p className="description">{frontMatter.description}</p>
         )}
       </div>
-      <main>{content}</main>
+      <main className={styles.content}>{content}</main>
     </LessonLayout>
   );
 }
