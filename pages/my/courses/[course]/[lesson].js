@@ -23,10 +23,27 @@ const components = {
   Quizlet: dynamic(() => import("components/Quizlet")),
 };
 
-export default function PostPage({ source, frontMatter, course }) {
+const getNextLesson = (course, lessonSlug) => {
+  const currentLesson = course.lessons.find(
+    (lesson) => lesson.slug === lessonSlug
+  );
+  const nextSequence = currentLesson.sequence + 1;
+  const nextLesson = course.lessons.find(
+    (lesson) => lesson.sequence === nextSequence
+  );
+  return nextLesson;
+};
+
+export default function PostPage({ source, frontMatter, course, lessonSlug }) {
   const content = hydrate(source, { components });
+  const nextLesson = getNextLesson(course, lessonSlug);
+
   return (
-    <LessonLayout title={frontMatter.title} course={course}>
+    <LessonLayout
+      title={frontMatter.title}
+      course={course}
+      nextLesson={nextLesson}
+    >
       <div className="post-header">
         <Heading className={styles.lessonHeading}>{frontMatter.title}</Heading>
         {frontMatter.description && (
@@ -64,6 +81,7 @@ export const getStaticProps = async ({ params }) => {
       source: mdxSource,
       frontMatter: data,
       course,
+      lessonSlug: params.lesson,
     },
   };
 };

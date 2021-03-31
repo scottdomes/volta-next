@@ -1,9 +1,11 @@
+import Button from "components/Button";
 import CourseHeader from "components/CourseHeader";
 import Head from "next/head";
-import Header from "../Header";
+import Link from "next/link";
 import Content from "./Content";
+import styles from "./styles/LessonLayout.module.css";
 
-const LessonLayout = ({ children, title, course }) => {
+const LessonLayout = ({ children, title, course, nextLesson }) => {
   return (
     <div>
       <Head>
@@ -12,6 +14,11 @@ const LessonLayout = ({ children, title, course }) => {
       </Head>
       <CourseHeader course={course} />
       <Content>{children}</Content>
+      <div className={styles.buttonContainer}>
+        <Link href={`/my/courses/${course.slug}/${nextLesson.slug}`}>
+          <Button>Complete lesson</Button>
+        </Link>
+      </div>
     </div>
   );
 };

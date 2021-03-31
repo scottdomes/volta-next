@@ -1,0 +1,20 @@
+@value blue, lightBlue from "../../styles/colors.css";
+@value drop from "../../styles/shadows.css";
+
+.container {
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+  width: 200px;
+  height: 45px;
+  border: none;
+  box-shadow: drop;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+}
+
+.container:hover {
+  background-color: lightBlue;
+  cursor: pointer;
+}
