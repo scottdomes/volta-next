@@ -6,6 +6,9 @@ import Content from "./Content";
 import styles from "./styles/LessonLayout.module.css";
 
 const LessonLayout = ({ children, title, course, nextLesson }) => {
+  const nextLessonUrl = nextLesson
+    ? `/my/courses/${course.slug}/${nextLesson.slug}`
+    : `/my/courses/${course.slug}/complete`;
   return (
     <div>
       <Head>
@@ -15,7 +18,7 @@ const LessonLayout = ({ children, title, course, nextLesson }) => {
       <CourseHeader course={course} />
       <Content>{children}</Content>
       <div className={styles.buttonContainer}>
-        <Link href={`/my/courses/${course.slug}/${nextLesson.slug}`}>
+        <Link href={nextLessonUrl}>
           <Button>Complete lesson</Button>
         </Link>
       </div>
